@@ -23,15 +23,15 @@ const Label = ({ label }: { label: string }) => {
   return (
     <span
       className={[
-        `text-mono 
+        `text-mono
         h-[18px],
         flex
         items-center
         justify-center
         px-1.5
-        rounded-full 
+        rounded-full
         tracking-widest
-        text-[10px] 
+        text-[10px]
         font-medium
         truncate`,
         color,
@@ -60,7 +60,7 @@ const ProductMenuItem: FC<Props> = ({
       <div className="flex w-full items-center justify-between gap-1">
         <div
           title={hoverText ? hoverText : typeof name === 'string' ? name : ''}
-          className={'flex items-center gap-2 w-full' + textClassName}
+          className={`flex items-center gap-2 w-full ${textClassName}`}
         >
           <span className="truncate">{name} </span>
           {label !== undefined && <Label label={label} />}
